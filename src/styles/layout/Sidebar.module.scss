@@ -1,0 +1,12 @@
+.sidebar {
+    grid-area: sidebar;
+    width: 240px;
+    padding: 8px;
+    
+    .sidebar-content{
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #2a4a74 0%, #132846 100%);
+    }
+}

@@ -1,0 +1,25 @@
+.navbar {
+    grid-area: navbar;
+    height: 64px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #4c4c4c;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 755px) {
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 40;
+    }
+}

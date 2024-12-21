@@ -1,0 +1,27 @@
+.layout {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        'sidebar navbar'
+        'sidebar main'
+    ;
+    height: 100vh;
+
+    .main {
+        grid-area: main;
+        overflow: auto;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 755px) {
+    .layout {
+        height: auto;
+
+        .main {
+            margin-top: 64px;
+        }
+    }
+}
