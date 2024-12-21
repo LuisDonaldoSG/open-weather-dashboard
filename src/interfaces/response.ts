@@ -1,8 +1,6 @@
-export interface ResponseI<I, E = undefined> {
-    success: boolean,
-    statusCode: number
-    message: string
-    body: I
-    detail?: E
-    data?: I
+export interface ResponseListI<I, E = undefined> {
+    list: I
+    cnt: number
+    code?: number
+    message?: E
 }

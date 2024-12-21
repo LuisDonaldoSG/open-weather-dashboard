@@ -1,5 +1,7 @@
-import React, { ReactNode } from "react";
-import { PathsElementsI } from "./paths";
+import React from "react";
+import { PathsElementsI } from "@interfaces/paths";
+import { ResponseListI } from "@interfaces/response";
+import { WeatherByCityI } from "@interfaces/weather";
 
 
 export interface LayoutI {
@@ -25,4 +27,8 @@ export interface LinkItemI {
 
 export interface SideBarI {
     display?: string
+}
+
+export interface SelectableCitiesAndDetailsI {
+    data: ResponseListI<WeatherByCityI[]>
 }
