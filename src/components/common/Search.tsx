@@ -36,7 +36,7 @@ export default function Search() {
     }
 
     return (
-        <form className='flex items-center justify-center py-2 gap-4 flex-col lg:flex-row relative' action={formAction}>
+        <form className='flex items-center justify-center py-2 gap-4 flex-col lg:flex-row lg:relative' action={formAction}>
             <input
                 type='text'
                 placeholder='Search'
@@ -74,7 +74,7 @@ export default function Search() {
                 }
             </button>
             {
-                openList && <div className="absolute right-0 top-12 flex flex-col justify-center gap-2 p-2 bg-white shadow rounded-lg w-80">
+                openList && <div className="flex flex-col justify-center gap-2 p-2 bg-white shadow rounded-lg fixed bottom-0 w-full lg:absolute lg:right-0 lg:w-80 lg:top-12 lg:bottom-auto">
                     {
                         state.list.map((city, index) => (
                             <div
