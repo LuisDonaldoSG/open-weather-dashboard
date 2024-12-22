@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Instrucciones
 
-## Getting Started
+Para instalar todas las dependencias:
 
-First, run the development server:
+```bash
+npm i
+```
+
+Para correr el servidor local:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) para ver el resultado en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para correr pruebas de jest:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run test
+```
 
-## Learn More
+Descripción de funcionalidades:
 
-To learn more about Next.js, take a look at the following resources:
+```
+Esta es una aplicación construida con Next.js 15 y React 19, que aprovecha las últimas herramientas web. El proyecto incluye un dashboard compuesto por dos componentes principales: <Search /> y <CitiesInfo />. En el Home, se realiza un fetch inicial con ciudades preestablecidas. El componente <Search /> contiene un formulario que interactúa con la API de OpenWeather utilizando su método find. Este método permite buscar ciudades con datos climáticos, basándose en los parámetros enviados en la consulta.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Además, el usuario puede filtrar los resultados según una temperatura específica, pudiendo elegir entre opciones como mayor, menor o igual a un valor determinado. Una vez recuperadas las ciudades, el usuario puede seleccionar una de ellas desde un dropdown. Al seleccionar una ciudad, el cityId correspondiente se agrega a los parámetros de la URL (query param), lo cual será recibido por una Server Action.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+El componente <CitiesInfo /> realiza un nuevo fetch a la API de OpenWeather, filtrando los resultados por el cityId proporcionado, y muestra la información relacionada con esa ciudad. Si el usuario lo desea, se pueden realizar más acciones sobre la información recuperada.
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

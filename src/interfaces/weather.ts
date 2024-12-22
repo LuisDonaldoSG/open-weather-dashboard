@@ -42,7 +42,7 @@ export interface WeatherByCityI {
     sys: SysInfoI;
     weather: WeatherConditionI[];
     main: MainWeatherDataI;
-    visibility: number;
+    visibility?: number;
     wind: WindDataI;
     clouds: CloudsDataI;
     dt: number;
