@@ -32,3 +32,7 @@ export interface SideBarI {
 export interface SelectableCitiesAndDetailsI {
     data: ResponseListI<WeatherByCityI[]>
 }
+
+export interface HomeI {
+    cityId: string
+}
